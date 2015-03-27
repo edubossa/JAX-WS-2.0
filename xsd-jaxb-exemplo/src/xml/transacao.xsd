@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.ntk.com.br/transacao"
+	xmlns:tns="http://www.ntk.com.br/transacao" elementFormDefault="qualified">
+	
+	<xsd:element name="transacao" type="tns:transacao" />
+
+	<xsd:complexType name="transacao"> 	
+		<xsd:sequence>
+			<xsd:element name="nsu" minOccurs="1" maxOccurs="1" type="xsd:string" />
+			<xsd:element name="dataHora" minOccurs="1" type="xsd:dateTime" />
+			<xsd:element name="valor" minOccurs="1" maxOccurs="1" type="xsd:decimal" />
+			<xsd:element name="tipoTransacao" minOccurs="1" maxOccurs="1" type="tns:tipoTransacao" />
+			<xsd:element name="cartao" minOccurs="1" maxOccurs="1" type="tns:cartao"  /> 
+		</xsd:sequence>
+	</xsd:complexType>
+	
+	<xsd:simpleType name="tipoTransacao">
+		<xsd:restriction base="xsd:string" >
+			<xsd:enumeration value="DEBITO" />
+			<xsd:enumeration value="CREDITO"/>
+			<xsd:enumeration value="BOLETO"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	
+	<xsd:complexType name="cartao">
+		<xsd:sequence>
+			<xsd:element name="numCartao" minOccurs="1" maxOccurs="1" type="xsd:string" />
+			<xsd:element name="validade" minOccurs="1" maxOccurs="1" >
+				<xsd:complexType>
+					<xsd:attribute name="mes" use="required" type="xsd:int" />
+					<xsd:attribute name="ano" use="required" type="xsd:int"  />
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="via" minOccurs="1" maxOccurs="1" type="xsd:int" /> 
+			<xsd:element name="tipo" minOccurs="1" maxOccurs="1" type="xsd:int" />
+		</xsd:sequence>
+	
+	</xsd:complexType>
+	
+	
+</xsd:schema>

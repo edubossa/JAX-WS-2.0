@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://globalcode.com.br/aluno"
+	xmlns:gc="http://globalcode.com.br/aluno" elementFormDefault="qualified">
+	
+	<element name="aluno" type="gc:alunoType"  />
+		
+		<complexType name="alunoType" > 
+			<sequence>
+				<element name="matricula" type="gc:matriculaType" /> 
+				<element name="nome" type="string" minOccurs="0" />
+				<element name="especial" minOccurs="0" >
+					<complexType></complexType>
+				</element>
+			</sequence>
+		</complexType>
+		
+		<complexType name="matriculaType">
+			<attribute name="status" use="required" type="string" />
+			<attribute name="numero" use="required" type="integer" /> 	
+		</complexType>		
+	
+</schema>

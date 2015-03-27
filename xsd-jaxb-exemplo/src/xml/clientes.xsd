@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" 
+	targetNamespace="http://www.globalcode.com.br/ae/clientes" elementFormDefault="qualified" > 
+	
+	<element name="clientes">
+		<complexType>
+			<sequence>
+				<element name="cliente" maxOccurs="unbounded" >
+					<complexType>
+						<sequence>
+							<element name="nome" type="string" />
+							<choice>
+								<element name="idade" type="int" minOccurs="0" />
+								<element name="dataNascimento"  minOccurs="0" >
+									<complexType>
+										<attribute name="dia" use="required" type="int" />
+										<attribute name="mes" use="required" type="int"  />
+										<attribute name="ano" use="required" type="int"  />
+									</complexType>
+								</element> 
+							</choice>	
+							<element name="email" minOccurs="0" maxOccurs="unbounded" type="string" />
+						</sequence>
+					</complexType>
+				</element>
+			</sequence>
+		</complexType>
+	</element>	
+	
+</schema>

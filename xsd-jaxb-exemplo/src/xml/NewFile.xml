@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<transacao xmlns="http://www.ntk.com.br/transacao">
+	<nsu>00914547</nsu>
+	<dataHora>2014-11-04T22:55:03.032-02:00</dataHora>
+	<valor>5478.12</valor>
+	<tipoTransacao>CREDITO</tipoTransacao>
+	<cartao>
+		<numCartao>3214 4565 8974 1457</numCartao>
+		<validade mes="12" ano="2014" />
+		<via>0</via>
+		<tipo>5</tipo>
+	</cartao>
+</transacao>

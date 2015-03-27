@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pedido numero="1000"
+        xmlns = "http://www.globalcode.com.br/ae/pedidos"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.globalcode.com.br/ae/pedidos pedidos.xsd">
+    <cliente>
+        <nome>José da Silva</nome>
+        <endereco>Rua das Camelias, 320</endereco>
+    </cliente>
+    <item>
+        <quantidade>1</quantidade>
+        <produto>
+            <id>311</id>
+            <nome>Camera DC 510</nome>
+            <preco>1500</preco>
+            <marca>Sony</marca>
+        </produto>
+    </item>
+    <item>
+        <quantidade>2</quantidade>
+        <produto>
+            <id>312</id>
+            <nome>HD 80GB</nome>
+            <preco>400</preco>
+            <marca>Samsung</marca>
+        </produto>
+    </item>
+</pedido>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transacao xmlns="http://www.ntk.com.br/transacao" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.ntk.com.br/transacao transacao.xsd">
+	
+	<nsu>155421</nsu>
+	<dataHora>2014-11-04T00:00:00</dataHora>
+	<valor>124.54</valor>
+	<tipoTransacao>CREDITO</tipoTransacao>
+	<cartao>
+		<numCartao>4056 6542 45654 1214 6451</numCartao>
+		<validade mes="12" ano="2017" />
+		<via>00</via>
+		<tipo>45</tipo>
+	</cartao>
+	
+</transacao>
